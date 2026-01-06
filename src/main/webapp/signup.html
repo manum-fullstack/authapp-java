@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Account</h2>
+
+    <form action="signup" method="post" onsubmit="return handleSubmit()">
+
+        <div class="field">
+            <input type="text" name="username" id="username" placeholder=" " required>
+            <label>Username</label>
+        </div>
+
+        <div class="field">
+            <input type="password" name="password" id="password" placeholder=" " required onkeyup="checkStrength()">
+            <label>Password</label>
+            <span class="toggle" onclick="togglePassword()">Show</span>
+            <div id="strength" class="strength"></div>
+        </div>
+
+        <button id="submitBtn">Sign Up</button>
+
+        <div class="error" id="errorMsg"></div>
+    </form>
+
+    <a href="login.html" class="link">Already have an account? Login</a>
+</div>
+
+<script src="signup.js"></script>
+<div id="toast" class="toast"></div>
+
+</body>
+</html>

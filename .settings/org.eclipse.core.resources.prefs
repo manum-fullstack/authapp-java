@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/main/java/controller/LoginServlet.java=UTF-8
+encoding//src/main/java/controller/SignupServlet.java=UTF-8
+encoding//src/main/java/dao/UserDAO.java=UTF-8
+encoding//src/main/webapp/dashboard.jsp=UTF-8
+encoding/<project>=windows-1252

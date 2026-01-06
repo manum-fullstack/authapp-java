@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <form action="login" method="post">
+
+        <div class="field">
+            <input type="text" name="username" id="username" placeholder=" " required>
+            <label>Username</label>
+        </div>
+
+        <div class="field">
+            <input type="password" name="password" id="password" placeholder=" " required>
+            <label>Password</label>
+            <span class="toggle" onclick="togglePassword()">Show</span>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <a href="signup.html" class="link">Create new account</a>
+</div>
+
+<!-- Toast container -->
+<div id="toast" class="toast"></div>
+
+<!-- Scripts -->
+<script src="toast.js"></script>
+<script>
+function togglePassword() {
+    const pwd = document.getElementById("password");
+    pwd.type = pwd.type === "password" ? "text" : "password";
+}
+
+const params = new URLSearchParams(window.location.search);
+if (params.get("logout") === "success") {
+    showToast("Logged out successfully 👋", "success");
+}
+</script>
+
+</body>
+</html>
